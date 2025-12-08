@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "tailwindcss";
+
+[data-theme="dark"] {
+  --text-color: white;
+  --icon-filter: invert(1);
+  --icon-filter1: invert(0);
+  --bg: #171717;
+  --panel-bg: #303030;
+  --panel-bg1: #e6e6e6;
+  --panel-bg-nn: #4e4e4e;
+  --outline1: #4a4a4a;
+  --panel-btn-outline: #6d6d6d;
+  --footer-color: #343434;
+  --btn-active: #404040;
+}
+.koho-extralight {
+  font-family: "KoHo", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.koho-light {
+  font-family: "KoHo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.koho-regular {
+  font-family: "KoHo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.koho-medium {
+  font-family: "KoHo", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.koho-semibold {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.koho-bold {
+  font-family: "KoHo", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.koho-extralight-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.koho-light-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.koho-regular-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.koho-medium-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.koho-semibold-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.koho-bold-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --btn-bg: rgb(246, 246, 246);
+  --btn-bg-focus: rgb(236, 239, 240);
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-family: "KoHo", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: left;
+}
+.menu-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 1rem;
+}
+.product-btn {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--btn-bg);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  overflow: clip;
+}
+.product-btn:hover {
+  background-color: var(--btn-bg-focus);
+}
+.product-btn img {
+  margin: auto;
+  margin-bottom: 0rem;
+}
+.product-btn-title {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.7rem;
+}
+.border-default {
+  outline: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: var(--radius);
+}
+.editor-businesscard-preview {
+  background-color: #e9e9e9;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.editor-businesscard-90x50 {
+  width: calc(90px * 5);
+  height: calc(50px * 5);
+  background-color: aqua;
+}
+
+.editor-field {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+}
+.editor-field > span {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 20%;
+  text-align: right;
+  margin: 0.5rem;
+  margin-right: 1rem;
+}
+.editor-field input {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  width: 65%;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.product-btn >.wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.tag-new {
+  position: relative;
+  width: 8rem;
+  height: 2rem;
+  background-color: red;
+  transform: rotate(-45deg) translate(-2rem, -1rem);
+  line-height: 2rem;
+}
