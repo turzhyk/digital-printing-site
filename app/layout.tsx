@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, KoHo } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Header } from "./Header/Header";
+import { Footer } from "./Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-const koHo = KoHo({
+const koho = KoHo({
+  subsets: ["latin"],
+  style: ["normal", "italic"],        // если нужны обе версии
+  weight: ["200", "300", "400", "500", "600", "700"], // ВСЕ веса, которые используешь
   variable: "--font-koho",
-  weight: "200"
+  display: "swap",
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,10 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` antialiased`}
+      <body 
+        className={`${koho.variable} antialiased`}
       >
+      <Header/>
+      <Sidebar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

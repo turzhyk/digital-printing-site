@@ -1,0 +1,58 @@
+.header {
+  position: fixed;
+  height: 5rem;
+  width: 100vw;
+
+  background-color: var(--background);
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 100ms;
+  z-index: 10;
+}
+.shrink{
+  border-bottom: 1px solid rgb(196, 196, 196);
+    height: 3.5rem;
+}
+.phone{
+      margin: auto;
+      padding: 0.5rem;
+}
+.logo {
+  border-radius: 1rem;
+  margin: 0.7rem;
+}
+.header.shrink .logo{
+      /* border-radius: 0.5rem; */
+}
+.header h1 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+.header h2 {
+  font-size: 1rem;
+  text-align: left;
+}
+.header li {
+  float: right;
+
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition-duration: 100ms;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  margin: 0px 0.5rem 0px 0.5rem;
+}
+.header img {
+  transition-duration: 100ms;
+}
+.header li img {
+  width: 1rem;
+}
+.header li:hover img {
+  transform: rotate(180deg);
+}
+.header li:hover {
+  background-color: var(--btn-bg-focus);
+  outline: 1px solid rgb(192, 192, 192);
+}

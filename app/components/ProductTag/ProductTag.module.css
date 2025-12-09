@@ -1,0 +1,14 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.tag {
+  position: relative;
+  width: 8rem;
+  height: 2rem;
+  background-color: rgb(214, 28, 28);
+  transform: rotate(-45deg) translate(-2rem, -1rem);
+  line-height: 2rem;
+  color: white;
+}
