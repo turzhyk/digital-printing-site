@@ -39,12 +39,52 @@ export const Header = () => {
           </li>
           <li>
             Usługi biurowe
+            <div className={styles.menu + " " + styles.tab + " border-default"}>
+              <div>
+              <strong>Druk</strong>
+              <ul>
+                <li>Ksero</li>
+                <li>Druk A3-A6</li>
+                <li>Druk A0-A2</li>
+                <li>Skan</li>
+              </ul>
+              </div>
+               <div>
+              <strong>Fotodruk</strong>
+              <ul>
+                <li>Zdjęcia na dokumenty</li>
+                <li>Zdjęcia A6</li>
+                <li>Zdjęcia A4</li>
+                <li>Fotomagnes</li>
+              </ul>
+              </div>
+            </div>
             <button className="ml-3">
               <img src="svg/arrow_down.svg" />
             </button>
           </li>
           <li>
-            Usługi druku
+            <a href="/services"> Usługi druku</a>
+            <div className={styles.menu + " " + styles.tab + " border-default"}>
+              <div>
+              <strong>Druk</strong>
+              <ul>
+                <li>Ksero</li>
+                <li>Druk A3-A6</li>
+                <li>Druk A0-A2</li>
+                <li>Skan</li>
+              </ul>
+              </div>
+               <div>
+              <strong>Fotodruk</strong>
+              <ul>
+                <li>Zdjęcia na dokumenty</li>
+                <li>Zdjęcia A6</li>
+                <li>Zdjęcia A4</li>
+                <li>Fotomagnes</li>
+              </ul>
+              </div>
+            </div>
             <button className="ml-3">
               <img src="svg/arrow_down.svg" />
             </button>
@@ -56,7 +96,9 @@ export const Header = () => {
             </button>
           </li>
         </ul>
-        <button><img className="w-10" src="svg/UI/shopping_bag.svg"/></button>
+        <button className={styles.card}>
+          <img className="" src="svg/UI/shopping_bag.svg" />
+        </button>
       </div>
     </header>
   );

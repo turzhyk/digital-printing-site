@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${koho.variable} antialiased`}
       >
       <Header/>
-      <Sidebar/>
+      {/* <Sidebar/> */}
         {children}
         <Footer/>
       </body>

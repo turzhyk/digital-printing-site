@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --text-color: white;
   --icon-filter: invert(1);
   --icon-filter1: invert(0);
@@ -12,73 +12,62 @@
   --panel-btn-outline: #6d6d6d;
   --footer-color: #343434;
   --btn-active: #404040;
-}
+} */
 .koho-extralight {
   font-family: "KoHo", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
-
 .koho-light {
   font-family: "KoHo", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
 .koho-regular {
   font-family: "KoHo", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .koho-medium {
   font-family: "KoHo", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .koho-semibold {
   font-family: "KoHo", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
-
 .koho-bold {
   font-family: "KoHo", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .koho-extralight-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
-
 .koho-light-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
-
 .koho-regular-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
-
 .koho-medium-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
-
 .koho-semibold-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
-
 .koho-bold-italic {
   font-family: "KoHo", sans-serif;
   font-weight: 700;
@@ -86,11 +75,16 @@
 }
 
 :root {
+  --bg-fade: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
   --background: #ffffff;
   --foreground: #171717;
-  --btn-bg: rgb(246, 246, 246);
+  
+  --btn-bg: #f6f6f6;
   --btn-bg-focus: rgb(236, 239, 240);
+  --outline-color: #c2c2c2;
+  --outline-color2: #c2c2c2;
   --radius: 0.5rem;
+  --icon-filter: none;
 }
 
 @theme inline {
@@ -102,13 +96,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --bg-fade: linear-gradient(to right top, #000000, #0f0c0e, #181518, #1e1c22, #22242c);
     --background: #0a0a0a;
     --foreground: #ededed;
+    --outline-color: #3c3c3c;
+    --outline-color2:rgb(85, 85, 85)c;
+    --btn-bg: #1b1b1b;
+    --icon-filter: invert(1);
+     --btn-bg-focus: #2b2d2d;
   }
 }
 
 body {
   background: var(--background);
+  background-image: var(--bg-fade);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -121,10 +122,10 @@ h1 {
 
 .menu-buttons {
   display: grid;
-  /* grid-template-columns: auto auto auto auto auto auto; */
   grid-template-columns: repeat(auto-fill,10rem);
   gap: 1rem;
   width: auto;
+  /* justify-content: center; */
 }
 .product-btn {
   position: relative;
@@ -146,6 +147,7 @@ h1 {
 .product-btn img {
   margin: auto;
   margin-bottom: 0rem;
+  filter: var(--icon-filter);
   /* overflow: hidden; */
 }
 .product-btn-title {
@@ -156,7 +158,7 @@ h1 {
   margin: 0.7rem;
 }
 .border-default {
-  outline: 1px solid rgba(0, 0, 0, 0.288);
+  outline: 1px solid var(--outline-color2);
   border-radius: var(--radius);
 }
 .editor-businesscard-preview {

@@ -15,9 +15,9 @@ export default function page() {
           reprehenderit in voluptate velit esse cillum dolore
         </p>
       </div>
-      <div className="flex justify-between">
-        <div className="grow">
-          <div className="m-auto w-270">
+      
+        <div className="m-auto flex flex-col items-center w-auto max-w-230">
+          <div className=" w-full">
             <div className="flex items-center m-4 mb-0">
               <h1 className="m-5 ml-0">Druk</h1>
             </div>
@@ -36,7 +36,7 @@ export default function page() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col m-auto w-270">
+          <div className="m-auto w-full">
             <div className="flex items-center m-4 mb-0">
               <h1 className="m-5 ml-0">Foto produkcja</h1>
             </div>
@@ -105,7 +105,7 @@ export default function page() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col m-auto w-270">
+          <div className="m-auto w-full">
             <div className="flex items-center m-4 mb-0">
               <h1 className="m-5 ml-0">Produkcja firmowa</h1>
               {/* <div className="h-10 grow bg-violet-200 "></div> */}
@@ -166,7 +166,7 @@ export default function page() {
             </div>
           </div>
         </div>
-      </div>
+      
     </React.Fragment>
   );
 }

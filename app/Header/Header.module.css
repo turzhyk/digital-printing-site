@@ -3,27 +3,29 @@
   height: 5rem;
   width: 100vw;
 
-  background-color: var(--background);
+  border-bottom: 0px solid var(--outline-color);
   padding-right: 2rem;
   display: flex;
   justify-content: space-between;
   transition-duration: 100ms;
   z-index: 10;
 }
-.shrink{
-  border-bottom: 1px solid rgb(196, 196, 196);
-    height: 3.5rem;
+.shrink {
+  border-bottom: 1px solid var(--outline-color);
+  background-color: var(--background);
+  fill-opacity: 0;
+  height: 3.5rem;
 }
-.phone{
-      margin: auto;
-      padding: 0.5rem;
+.phone {
+  margin: auto;
+  padding: 0.5rem;
 }
 .logo {
   border-radius: 1rem;
   margin: 0.7rem;
 }
-.header.shrink .logo{
-      /* border-radius: 0.5rem; */
+.header.shrink .logo {
+  /* border-radius: 0.5rem; */
 }
 .header h1 {
   font-size: 1.5rem;
@@ -42,6 +44,7 @@
   padding: 0.4rem;
   border-radius: 0.6rem;
   margin: 0px 0.5rem 0px 0.5rem;
+  z-index: 12;
 }
 .header img {
   transition-duration: 100ms;
@@ -54,5 +57,49 @@
 }
 .header li:hover {
   background-color: var(--btn-bg-focus);
-  outline: 1px solid rgb(192, 192, 192);
+  outline: 1px solid var(--outline-color2);
+  border-radius: 0.4rem 0.4rem 0 0;
+  z-index: 15;
+}
+
+.menu {
+  position: absolute;
+  /* display: none; */
+  width: auto;
+  height: auto;
+  /* overflow: hidden; */
+  background-color: var(--btn-bg-focus);
+  transition-duration: 200ms;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1rem;
+  margin-left: -0.5rem;
+  margin-top: 1rem;
+  z-index: -1;
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+  border-radius: 0 0.4rem 0.4rem 0.4rem;
+}
+
+.header li:hover .menu {
+  /* display: block; */
+  
+  visibility: visible;
+  opacity: 1;
+  
+}
+.header .card img {
+  width: 1.2rem;
+}
+
+.tab li{
+  float: none;
+  padding: 0.0rem;
+  margin: 0px;
+  
+}
+.tab li:hover{
+  font-weight: 600;
+  outline: none;
 }
