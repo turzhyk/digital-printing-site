@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, KoHo } from "next/font/google";
+import { Zalando_Sans } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Header } from "./Header/Header";
@@ -9,12 +10,19 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-const koho = KoHo({
+export const koho = KoHo({
   subsets: ["latin"],
   style: ["normal", "italic"],        // если нужны обе версии
   weight: ["200", "300", "400", "500", "600", "700"], // ВСЕ веса, которые используешь
   variable: "--font-koho",
   display: "swap",
+});
+export const zalandoSans = Zalando_Sans({
+  subsets: ["latin"],          // нужные подмножества
+  weight: ["200","300","400","500","600","700","800","900"], // все веса
+  style: ["normal","italic"],  // обычный и курсив
+  variable: "--font-zalando",  // CSS-переменная для удобного использования
+  display: "swap",             // чтобы шрифт подгружался без FOUT
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -32,9 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body 
-        className={`${koho.variable} antialiased`}
+        className={` antialiased`}
       >
       <Header/>
       {/* <Sidebar/> */}

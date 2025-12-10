@@ -1,0 +1,26 @@
+.element{
+      width: 25rem;
+      height: 20rem;
+      background-color: var(--btn-bg);
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+}
+.element:hover{
+      background-color: var(--btn-bg-focus);
+}
+.element img{
+      margin: auto;
+      width: 10rem;
+}
+.element h2{
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+}
+.element .icon{
+      transform: rotate(-90deg);
+      width: 2rem;
+}

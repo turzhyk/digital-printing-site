@@ -1,0 +1,46 @@
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.1rem;
+  justify-content: center;
+}
+.cards_wrapper {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  width: 100%;
+}
+
+.cards_wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0; /* или max-height:0 */
+}
+.cards img {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.251);
+}
+img.hidden{
+  transform: rotate(180deg);
+}
+.card {
+  width: 22rem;
+  height: 14rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: var(--btn-bg-focus);
+}
+.card > div {
+  margin: auto;
+  margin: 1rem;
+}
+.arrow{
+  transform: rotate(-90deg);
+}

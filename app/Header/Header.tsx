@@ -15,89 +15,107 @@ export const Header = () => {
   }, []);
   return (
     <header className={`${styles.header}  ${!isFull ? styles.shrink : ""}`}>
-      <div className="flex ml-20">
-        <img className={styles.logo} src="icons/ig_logo.jpg" />
-        <div className="mt-2">
-          <h1 className="koho-regular">Digital Printing</h1>
-          <h2 className={"koho-semibold " + (isFull ? "" : "invisible")}>
-            Szybki i wygodny druk
-          </h2>
+      <a href="/" className="flex ml-20">
+        <img
+          className={styles.logo}
+          src="/icons/ig_logo.jpg"
+          alt="Digital Printing"
+        />
+        <div className={"mt-2 "}>
+          <div className="flex">
+            <div className={styles.title_wrapper}>
+              <h1 className={styles.title}>Digital Printing</h1>
+            </div>
+            <p className={styles.pointer}> &nbsp;|</p>
+          </div>
+          <div className={styles.slogan + " " + (isFull ? "" : styles.hidden)}>
+            <h2 className={"font-[600] "}>Szybki i wygodny druk</h2>
+          </div>
         </div>
-      </div>
+      </a>
       <div className="flex justify-between gap-7">
         <div className={"border-default koho-semibold " + styles.phone}>
           +48 123 456 789
         </div>
-        <ul className="koho-medium m-auto mr-20">
-          <li>O nas</li>
+        <nav className="m-auto">
+          <ul className=" koho-medium m-auto mr-20">
+            <li className={styles.regular_border}>
+              <a>O nas</a>
+            </li>
 
-          <li>
-            Usługi projektowania
-            <button className="ml-3">
-              <img src="svg/arrow_down.svg" />
-            </button>
-          </li>
-          <li>
-            Usługi biurowe
-            <div className={styles.menu + " " + styles.tab + " border-default"}>
-              <div>
-              <strong>Druk</strong>
-              <ul>
-                <li>Ksero</li>
-                <li>Druk A3-A6</li>
-                <li>Druk A0-A2</li>
-                <li>Skan</li>
-              </ul>
+            <li className={styles.dropdown_border}>
+              <a>Usługi projektowania</a>
+              <button className="ml-3">
+                <img src="/svg/arrow_down.svg" />
+              </button>
+            </li>
+            <li className={styles.dropdown_border}>
+              <a>Usługi biurowe</a>
+              <div
+                className={styles.menu + " " + styles.tab + " border-default"}
+              >
+                <div>
+                  <strong>Druk</strong>
+                  <ul>
+                    <li>Ksero</li>
+                    <li>Druk A3-A6</li>
+                    <li>Druk A0-A2</li>
+                    <li>Skan</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Fotodruk</strong>
+                  <ul>
+                    <li>Zdjęcia na dokumenty</li>
+                    <li>Zdjęcia A6</li>
+                    <li>Zdjęcia A4</li>
+                    <li>Fotomagnes</li>
+                  </ul>
+                </div>
               </div>
-               <div>
-              <strong>Fotodruk</strong>
-              <ul>
-                <li>Zdjęcia na dokumenty</li>
-                <li>Zdjęcia A6</li>
-                <li>Zdjęcia A4</li>
-                <li>Fotomagnes</li>
-              </ul>
+              <button className="ml-3">
+                <img src="/svg/arrow_down.svg" />
+              </button>
+            </li>
+            <li className={styles.dropdown_border}>
+              <a href="/services"> Usługi druku</a>
+              <div
+                className={styles.menu + " " + styles.tab + " border-default"}
+              >
+                <div>
+                  <strong>Druk</strong>
+                  <ul>
+                    <li>Ksero</li>
+                    <li>Druk A3-A6</li>
+                    <li>Druk A0-A2</li>
+                    <li>Skan</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Fotodruk</strong>
+                  <ul>
+                    <li>Zdjęcia na dokumenty</li>
+                    <li>Zdjęcia A6</li>
+                    <li>Zdjęcia A4</li>
+                    <li>Fotomagnes</li>
+                  </ul>
+                </div>
+                <a>Pokaż wszystko</a>
               </div>
-            </div>
-            <button className="ml-3">
-              <img src="svg/arrow_down.svg" />
-            </button>
-          </li>
-          <li>
-            <a href="/services"> Usługi druku</a>
-            <div className={styles.menu + " " + styles.tab + " border-default"}>
-              <div>
-              <strong>Druk</strong>
-              <ul>
-                <li>Ksero</li>
-                <li>Druk A3-A6</li>
-                <li>Druk A0-A2</li>
-                <li>Skan</li>
-              </ul>
-              </div>
-               <div>
-              <strong>Fotodruk</strong>
-              <ul>
-                <li>Zdjęcia na dokumenty</li>
-                <li>Zdjęcia A6</li>
-                <li>Zdjęcia A4</li>
-                <li>Fotomagnes</li>
-              </ul>
-              </div>
-            </div>
-            <button className="ml-3">
-              <img src="svg/arrow_down.svg" />
-            </button>
-          </li>
-          <li>
-            Sklep
-            <button className="ml-3">
-              <img src="svg/arrow_down.svg" />
-            </button>
-          </li>
-        </ul>
+              <button className="ml-3">
+                <img src="/svg/arrow_down.svg" />
+              </button>
+            </li>
+            <li className={styles.dropdown_border}>
+              Sklep
+              <button className="ml-3">
+                <img src="/svg/arrow_down.svg" />
+              </button>
+            </li>
+          </ul>
+        </nav>
         <button className={styles.card}>
-          <img className="" src="svg/UI/shopping_bag.svg" />
+          <img className="" src="/svg/UI/shopping_bag.svg" />
         </button>
       </div>
     </header>

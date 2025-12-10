@@ -7,12 +7,49 @@
   padding-right: 2rem;
   display: flex;
   justify-content: space-between;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
+  background-color: var(--background-a);
+  text-overflow: clip;
   z-index: 10;
+}
+.title_wrapper{
+  display: flex;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: printTitle;
+  animation-duration: 0.5s;
+  /* animation-delay: 0.2s; */
+  animation-timing-function: steps(16);
+}
+@keyframes printTitle{
+  from{
+    max-width: 0rem;
+  }
+  to {
+    max-width: 15rem;
+  }
+}
+.pointer{
+  font-weight: 700;
+  font-size: 1.5rem;
+  animation-name: blink;
+  animation-duration: 400ms;
+   animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blink{
+  from{
+    opacity: 0.3;
+  }
+  to{
+    opacity: 1;
+  }
 }
 .shrink {
   border-bottom: 1px solid var(--outline-color);
-  background-color: var(--background);
+
+  backdrop-filter: blur(2rem);
   fill-opacity: 0;
   height: 3.5rem;
 }
@@ -35,6 +72,18 @@
   font-size: 1rem;
   text-align: left;
 }
+.slogan {
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+
+}
+.slogan.hidden {
+  width: 0px;
+  /* opacity: 0; */
+}
 .header li {
   float: right;
 
@@ -42,7 +91,6 @@
   cursor: pointer;
   transition-duration: 100ms;
   padding: 0.4rem;
-  border-radius: 0.6rem;
   margin: 0px 0.5rem 0px 0.5rem;
   z-index: 12;
 }
@@ -58,8 +106,13 @@
 .header li:hover {
   background-color: var(--btn-bg-focus);
   outline: 1px solid var(--outline-color2);
-  border-radius: 0.4rem 0.4rem 0 0;
   z-index: 15;
+}
+.dropdown_border {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.regular_border {
+  border-radius: 0.4rem;
 }
 
 .menu {
@@ -68,38 +121,41 @@
   width: auto;
   height: auto;
   /* overflow: hidden; */
-  background-color: var(--btn-bg-focus);
-  transition-duration: 200ms;
+  background-color: var(--btn-bg);
+  transition-duration: 100ms;
   opacity: 0;
   visibility: hidden;
   padding: 1rem;
-  margin-left: -0.5rem;
-  margin-top: 1rem;
+  margin-left: -0.4rem;
+  margin-top: 0.5rem;
   z-index: -1;
   display: flex;
   justify-content: left;
   gap: 1.5rem;
   border-radius: 0 0.4rem 0.4rem 0.4rem;
+  box-shadow: 0px 0.3rem 0.6rem 0rem #0000002e;
 }
 
 .header li:hover .menu {
   /* display: block; */
-  
+
   visibility: visible;
   opacity: 1;
-  
 }
 .header .card img {
   width: 1.2rem;
 }
 
-.tab li{
-  float: none;
-  padding: 0.0rem;
-  margin: 0px;
-  
+.tab strong {
+  padding: 0.2rem;
 }
-.tab li:hover{
-  font-weight: 600;
+.tab li {
+  float: none;
+  padding: 0.2rem;
+  margin: 0px;
+  color: rgb(120, 120, 120);
+}
+.tab li:hover {
+  color: var(--color);
   outline: none;
 }

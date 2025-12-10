@@ -48,10 +48,10 @@ export default function page() {
                 />
                 <div className="product-btn-title">Pieczątki</div>
               </button>
-              <button className="product-btn border-default">
+              <a href="/services/businesscard" className="product-btn border-default">
                 <img  style={{ width: 120, height: 110 }} src="icons/categories/businesscards.png" />
                 <div className="product-btn-title">Wizytówki</div>
-              </button>
+              </a>
               <button className="product-btn border-default">
                 <img
                   style={{ width: 120, height: 110 }}

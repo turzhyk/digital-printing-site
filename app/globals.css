@@ -13,6 +13,7 @@
   --footer-color: #343434;
   --btn-active: #404040;
 } */
+
 .koho-extralight {
   font-family: "KoHo", sans-serif;
   font-weight: 200;
@@ -75,35 +76,52 @@
 }
 
 :root {
-  --bg-fade: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+  --bg-fade: linear-gradient(
+    to right top,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
   --background: #ffffff;
+  --background-a: #ffffffde;
   --foreground: #171717;
-  
+
   --btn-bg: #f6f6f6;
   --btn-bg-focus: rgb(236, 239, 240);
   --outline-color: #c2c2c2;
   --outline-color2: #c2c2c2;
   --radius: 0.5rem;
   --icon-filter: none;
+  /* font-family: var(--font-koho); */
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-fade: linear-gradient(to right top, #000000, #0f0c0e, #181518, #1e1c22, #22242c);
+    --bg-fade: linear-gradient(
+      to right top,
+      #000000,
+      #0f0c0e,
+      #181518,
+      #1e1c22,
+      #22242c
+    );
     --background: #0a0a0a;
     --foreground: #ededed;
+
     --outline-color: #3c3c3c;
-    --outline-color2:rgb(85, 85, 85)c;
+    --outline-color2: rgb(85, 85, 85) c;
     --btn-bg: #1b1b1b;
     --icon-filter: invert(1);
-     --btn-bg-focus: #2b2d2d;
+    --btn-bg-focus: #2b2d2d;
   }
 }
 
@@ -111,18 +129,34 @@ body {
   background: var(--background);
   background-image: var(--bg-fade);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+   /* font-family: KoHo, Helvetica, sans-serif; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.font-geist-sans {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+.font-zalando {
+  font-family: var(--font-zalando), sans-serif;
 }
 h1 {
-  font-family: "KoHo", sans-serif;
-  font-weight: 300;
+    font-family: "KoHo", sans-serif;
   font-size: 2.5rem;
-  text-align: left;
+
+}
+h2 {
+    font-family: "KoHo", sans-serif;
+  font-size: 1.8rem;
+}
+h3{
+    font-family: "KoHo", sans-serif;
+}
+p{
+    font-family: "KoHo", sans-serif;
 }
 
 .menu-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fill,10rem);
+  grid-template-columns: repeat(auto-fill, 10rem);
   gap: 1rem;
   width: auto;
   /* justify-content: center; */
@@ -151,7 +185,6 @@ h1 {
   /* overflow: hidden; */
 }
 .product-btn-title {
-  font-family: "KoHo", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
@@ -178,7 +211,6 @@ h1 {
   display: flex;
 }
 .editor-field > span {
-  font-family: "KoHo", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   width: 20%;
@@ -187,11 +219,17 @@ h1 {
   margin-right: 1rem;
 }
 .editor-field input {
-  font-family: "KoHo", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.2rem;
   width: 65%;
   text-align: center;
   border-bottom: 2px solid black;
+}
+.main-panel {
+  background-image: linear-gradient(
+    109.6deg,
+    rgb(181, 142, 225) 11.2%,
+    rgb(42, 111, 151) 100.2%
+  );
 }
