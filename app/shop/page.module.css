@@ -1,0 +1,67 @@
+.top_categories{
+ font-size: 1rem;
+      border-bottom: 1px solid var(--outline-color);
+        border-top: 1px solid var(--outline-color);
+}
+.top_categories ul{
+      display: flex;
+      justify-content: space-between;
+}
+.top_categories li{
+      margin: 0.5rem;
+      cursor: pointer;
+}
+.top_categories li:hover{
+      margin: 0.5rem;
+      cursor: pointer;
+      color: orange;
+}
+.vt{
+      height: 1.5rem;
+      background-color: var(--outline-color);
+      width: 1px;
+      margin: 0 1rem 0 1rem;
+}
+.vt2 {
+  height: 100%;
+  width: 1px;
+  background-color: rgb(188, 188, 188);
+}
+.cards_wrapper{
+      display: grid;
+      justify-content: stretch;
+      width: 100%;
+     
+      grid-template-columns: auto auto auto auto;
+
+}
+.categories_wrapper{
+      display: grid;
+      justify-content: stretch;
+      gap: 1rem;
+      grid-template-columns: auto auto auto auto;
+}
+.category{
+      background-color: var(--btn-bg);
+      height: 12rem;
+      width: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      text-align: center;
+      padding: 1rem;
+      cursor: pointer;
+      transition-duration: 100ms;
+
+}
+.category:hover {
+ background-color: var(--btn-bg-focus);
+}
+.category h3{
+font-weight: 600;
+font-size: 1.2rem;
+}
+
+.category img{
+      height: 8rem;
+      margin: auto;
+}

@@ -107,7 +107,7 @@ export const Header = () => {
               </button>
             </li>
             <li className={styles.dropdown_border}>
-              Sklep
+              <a href="/shop">Sklep</a>
               <button className="ml-3">
                 <img src="/svg/arrow_down.svg" />
               </button>

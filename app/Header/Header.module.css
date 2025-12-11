@@ -11,6 +11,7 @@
   background-color: var(--background-a);
   text-overflow: clip;
   z-index: 10;
+    backdrop-filter: blur(2rem);
 }
 .title_wrapper{
   display: flex;
@@ -49,7 +50,7 @@
 .shrink {
   border-bottom: 1px solid var(--outline-color);
 
-  backdrop-filter: blur(2rem);
+
   fill-opacity: 0;
   height: 3.5rem;
 }

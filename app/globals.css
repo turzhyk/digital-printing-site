@@ -84,6 +84,8 @@
     #ffffff,
     #ffffff
   );
+  --accent-color1: #f3a30e;
+   --accent-color2: #976810;
   --background: #ffffff;
   --background-a: #ffffffde;
   --foreground: #171717;
@@ -137,6 +139,9 @@ body {
 }
 .font-zalando {
   font-family: var(--font-zalando), sans-serif;
+}
+.font-koho {
+  font-family: var(--font-koho), sans-serif;
 }
 h1 {
     font-family: "KoHo", sans-serif;
