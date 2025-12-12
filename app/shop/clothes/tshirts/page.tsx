@@ -9,7 +9,7 @@ export default function page() {
       <div className="pt-20" />
       <ShopHeader/>
       
-      <div className="pt-10 flex justify-center gap-0 w-[80%] m-auto">
+      <div className="pt-10 flex justify-center gap-4 w-[80%] m-auto">
       <ShopSidebar/>
       <div className="w-[60rem]  m-auto ">
         <div className="border-default w-full h-15 mb-10"><input></input></div>

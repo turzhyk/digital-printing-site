@@ -117,10 +117,11 @@
       #22242c
     );
     --background: #0a0a0a;
+      --background-a: #000000b1;
     --foreground: #ededed;
 
     --outline-color: #3c3c3c;
-    --outline-color2: rgb(85, 85, 85) c;
+    --outline-color2: rgb(85, 85, 85);
     --btn-bg: #1b1b1b;
     --icon-filter: invert(1);
     --btn-bg-focus: #2b2d2d;
