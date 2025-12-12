@@ -18,7 +18,7 @@ export const Header = () => {
       <a href="/" className="flex ml-20">
         <img
           className={styles.logo}
-          src="/icons/ig_logo.jpg"
+          src="/svg/logo3.svg"
           alt="Digital Printing"
         />
         <div className={"mt-2 "}>

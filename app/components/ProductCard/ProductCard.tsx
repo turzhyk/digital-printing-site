@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
+import Link from "next/link";
 
 export const ProductCard = (props: { price: number; sale?: number }) => {
   const getPrice = () => {
@@ -7,7 +8,7 @@ export const ProductCard = (props: { price: number; sale?: number }) => {
     else return props.price;
   };
   return (
-    <div className={styles.card + " flex flex-col justify-between"}>
+    <Link href="/shop/asd" className={styles.card + " flex flex-col justify-between"}>
       <div>
         {props.sale && <div className={styles.sale_tag}>-{props.sale}%</div>}
         <div className="p-6 w-auto h-[14rem] overflow-clip">
@@ -46,6 +47,6 @@ export const ProductCard = (props: { price: number; sale?: number }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

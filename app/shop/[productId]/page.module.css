@@ -1,0 +1,67 @@
+.product
+.product_title{
+      
+}
+.price{
+      font-weight: 600;
+      font-size: 2rem;
+
+      display: flex;
+}
+.type_name{
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.8;
+}
+.type_param{
+      text-align: right;
+      font-size: 1rem;
+      font-weight: 600;
+}
+.product hr{
+     
+      margin-top: 1rem;
+}
+.question{
+ width: 1rem;
+ margin-left: -1rem;
+}
+.question img{
+
+}
+.size_panel{
+     display: flex;
+     overflow: hidden;
+    max-width: fit-content;
+}
+.size_panel button{
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      font-weight: 700;
+}
+.size_panel button:hover{
+      background-color: var(--btn-bg-focus)
+}
+.size_panel button.active{
+      background-color: var(--accent-color1);
+}
+
+.buy_panel{
+      width: 20rem;
+      padding: 1rem;
+      height: 20rem;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.183);
+}
+.buy_btn{
+      width: 100%;
+      height: 3rem;
+      background-color: var(--accent-color1);
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+}
+.buy_btn:hover{
+      background-color: var(--accent-color2);
+      color: white;
+}

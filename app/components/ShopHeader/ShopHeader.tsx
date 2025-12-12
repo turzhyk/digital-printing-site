@@ -4,7 +4,7 @@ export const ShopHeader = () => {
   return (
    <div
         className={
-          "w-full h-[3rem] flex justify-center koho-semibold items-center " +
+          "w-full h-[3rem] flex justify-center koho-semibold items-center sticky top-[3.45rem] " +
           styles.top_categories
         }
       >
