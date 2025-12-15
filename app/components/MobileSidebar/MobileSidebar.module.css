@@ -5,10 +5,13 @@
   transition: opacity 200ms ease;
   pointer-events: none;
 }
-.wrapper.tab.shown{
-      pointer-events: all;
-}
 
+.wrapper.show {
+  pointer-events: all;
+}
+.wrapper .tab.shown {
+  pointer-events: all;
+}
 .sidebar {
   width: 100%;
   height: 100vh;

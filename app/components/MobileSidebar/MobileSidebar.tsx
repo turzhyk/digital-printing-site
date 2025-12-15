@@ -19,10 +19,10 @@ export default function MobileSidebar() {
         <img src={"/svg/UI/burger.svg"} />
       </button>
       <div
-        className={`${styles.wrapper} ${isShown ? styles.show : styles.hide}`}
+        className={`${styles.wrapper} ${isShown ? styles.show : ""}`}
         onClick={() => setIsShown(false)}
       >
-        <div className={styles.sidebar}>
+        <div className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
           <div className="flex ml-5 items-center">
             <img
               width={50}
@@ -44,8 +44,8 @@ export default function MobileSidebar() {
               </div>
             </div>
           </div>
-          <div className={styles.content + " text-[1.5rem] mt-10 p-5"}>
-            <ul className={styles.tabs}>
+          <div className={" text-[1.5rem] mt-10 p-5"}>
+            <ul className="">
               <li>
                 <button onClick={() => onTabClick(1)}>Usługi druku</button>
               </li>
