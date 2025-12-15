@@ -7,7 +7,7 @@ export default function page() {
     <React.Fragment>
       <div className="flex flex-col items-center m-auto pt-30">
         <h1 className="text-center block">Usługi naszej drukarni</h1>
-        <p className="block max-w-200">
+        <p className="block max-w-200 p-4">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

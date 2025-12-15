@@ -85,7 +85,7 @@
     #ffffff
   );
   --accent-color1: #f3a30e;
-   --accent-color2: #976810;
+  --accent-color2: #976810;
   --background: #ffffff;
   --background-a: #ffffffde;
   --foreground: #171717;
@@ -117,7 +117,7 @@
       #22242c
     );
     --background: #0a0a0a;
-      --background-a: #000000b1;
+    --background-a: #000000b1;
     --foreground: #ededed;
 
     --outline-color: #3c3c3c;
@@ -132,7 +132,7 @@ body {
   background: var(--background);
   background-image: var(--bg-fade);
   color: var(--foreground);
-   /* font-family: KoHo, Helvetica, sans-serif; */
+  font-family: KoHo, Helvetica, sans-serif;
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 .font-geist-sans {
@@ -145,19 +145,18 @@ body {
   font-family: var(--font-koho), sans-serif;
 }
 h1 {
-    font-family: "KoHo", sans-serif;
+  font-family: "KoHo", sans-serif;
   font-size: 2.5rem;
-
 }
 h2 {
-    font-family: "KoHo", sans-serif;
+  font-family: "KoHo", sans-serif;
   font-size: 1.8rem;
 }
-h3{
-    font-family: "KoHo", sans-serif;
+h3 {
+  font-family: "KoHo", sans-serif;
 }
-p{
-    font-family: "KoHo", sans-serif;
+p {
+  font-family: "KoHo", sans-serif;
 }
 
 .menu-buttons {
@@ -167,6 +166,7 @@ p{
   width: auto;
   /* justify-content: center; */
 }
+
 .product-btn {
   position: relative;
   width: 10rem;
@@ -238,4 +238,31 @@ p{
     rgb(181, 142, 225) 11.2%,
     rgb(42, 111, 151) 100.2%
   );
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+    width: auto;
+    /* justify-content: center; */
+  }
+  .product-btn {
+    position: relative;
+    width: 100%;
+    height: 9rem;
+    background-color: var(--btn-bg);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    overflow: clip;
+    line-height: 1rem;
+  }
+ 
 }

@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
+import MobileSidebar from "../components/MobileSidebar/MobileSidebar";
 
 export const Header = () => {
   const [isFull, setIsFull] = useState<boolean>(true);
 
+  const handleBurgerClick = () => {};
   useEffect(() => {
     const onScroll = () => {
       setIsFull(window.scrollY < 50);
@@ -15,7 +17,13 @@ export const Header = () => {
   }, []);
   return (
     <header className={`${styles.header}  ${!isFull ? styles.shrink : ""}`}>
-      <a href="/" className="flex ml-20">
+      <div className={styles.sidebar_holder}>
+       
+          <MobileSidebar />
+
+      </div>
+
+      <a href="/" className={"flex " + styles.logo_wrapper}>
         <img
           className={styles.logo}
           src="/svg/logo3.svg"

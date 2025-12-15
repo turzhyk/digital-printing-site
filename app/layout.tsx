@@ -5,6 +5,7 @@ import "./globals.css";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
+import MobileSidebar from "./components/MobileSidebar/MobileSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,17 +13,17 @@ const geistSans = Geist({
 });
 export const koho = KoHo({
   subsets: ["latin"],
-  style: ["normal", "italic"],        // если нужны обе версии
+  style: ["normal", "italic"], // если нужны обе версии
   weight: ["200", "300", "400", "500", "600", "700"], // ВСЕ веса, которые используешь
   variable: "--font-koho",
   display: "swap",
 });
 export const zalandoSans = Zalando_Sans({
-  subsets: ["latin"],          // нужные подмножества
-  weight: ["200","300","400","500","600","700","800","900"], // все веса
-  style: ["normal","italic"],  // обычный и курсив
-  variable: "--font-zalando",  // CSS-переменная для удобного использования
-  display: "swap",             // чтобы шрифт подгружался без FOUT
+  subsets: ["latin"], // нужные подмножества
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"], // все веса
+  style: ["normal", "italic"], // обычный и курсив
+  variable: "--font-zalando", // CSS-переменная для удобного использования
+  display: "swap", // чтобы шрифт подгружался без FOUT
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -41,13 +42,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body 
-        className={` antialiased`}
-      >
-      <Header/>
-      {/* <Sidebar/> */}
+      <body className={` antialiased`}>
+        <Header />
+        
+        {/* <Sidebar/> */}
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
