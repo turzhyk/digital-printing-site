@@ -89,7 +89,7 @@
   width: 0px;
   /* opacity: 0; */
 }
-.header li {
+.header .tabs>li {
   float: right;
 
   font-size: 1.1rem;
@@ -179,7 +179,7 @@
   .logo_wrapper{
     display: none;
   }
-  .header ul {
+  .header ul.tabs {
     display: none;
   }
   .title{

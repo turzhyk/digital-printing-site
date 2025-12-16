@@ -8,10 +8,12 @@ export default function MobileSidebar() {
   const [isShown, setIsShown] = useState<boolean>(false);
 
   const handleBurgerClick = () => {
-    setIsShown(!isShown);
+    setIsShown(true);
+    console.log("burger click");
   };
   const onTabClick = (val: number) => {
     setTabSelected(val);
+    console.log("ddsad");
   };
   return (
     <React.Fragment>
@@ -20,7 +22,7 @@ export default function MobileSidebar() {
       </button>
       <div
         className={`${styles.wrapper} ${isShown ? styles.show : styles.hide}`}
-        onClick={() => setIsShown(false)}
+        // onClick={() => setIsShown(false)}
       >
         <div className={styles.sidebar}>
           <div className="flex ml-5 items-center">
@@ -44,13 +46,13 @@ export default function MobileSidebar() {
               </div>
             </div>
           </div>
-          <div className={styles.content + " text-[1.5rem] mt-10 p-5"}>
+          <div className={styles.content + " text-[1.5rem] p-5"}>
             <ul className={styles.tabs}>
               <li>
-                <button onClick={() => onTabClick(1)}>Usługi druku</button>
+                <button>Skelp</button>
               </li>
               <li>
-                <button>Skelp</button>
+                <button onClick={() => onTabClick(1)}>Usługi druku</button>
               </li>
             </ul>
           </div>
@@ -60,14 +62,14 @@ export default function MobileSidebar() {
             }
           >
             <div className="flex justify-between items-center">
+
               <button
-                className="font-[500] flex gap-2"
+                className="font-[500] text-2xl mb-2 flex gap-2 items-center"
                 onClick={() => onTabClick(0)}
               >
-                <img width={15} src={"/svg/arrow_down.svg"} />
-                Zwróc
+                <img width={15} src={"/svg/arrow_down.svg"} style={{transform: "rotate(90deg)"}} />
+                Sklep
               </button>
-              <p className="font-[500] text-2xl mb-2">Sklep</p>
             </div>
 
             <ul>

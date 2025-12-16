@@ -46,7 +46,7 @@ export const Header = () => {
           +48 123 456 789
         </div>
         <nav className="m-auto">
-          <ul className=" koho-medium m-auto mr-20">
+          <ul className={" koho-medium m-auto mr-20 "+styles.tabs}>
             <li className={styles.regular_border}>
               <a>O nas</a>
             </li>
