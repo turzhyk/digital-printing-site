@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import MobileSidebar from "../components/MobileSidebar/MobileSidebar";
+import Link from "next/link";
 
 export const Header = () => {
   const [isFull, setIsFull] = useState<boolean>(true);
@@ -23,7 +24,7 @@ export const Header = () => {
 
       </div>
 
-      <a href="/" className={"flex " + styles.logo_wrapper}>
+      <Link href="/" className={"flex " + styles.logo_wrapper}>
         <img
           className={styles.logo}
           src="/svg/logo3.svg"
@@ -40,25 +41,26 @@ export const Header = () => {
             <h2 className={"font-[600] "}>Szybki i wygodny druk</h2>
           </div>
         </div>
-      </a>
+      </Link>
       <div className="flex justify-between gap-7">
-        <div className={"border-default koho-semibold " + styles.phone}>
-          +48 123 456 789
+        <div className={"border-default koho-semibold flex gap-2 " + styles.phone}>
+          <img className="w-5" src="/svg/UI/phone.svg" />
+            <span>123 456 789</span>
         </div>
         <nav className="m-auto">
-          <ul className=" koho-medium m-auto mr-20">
+          <ul className={" koho-medium m-auto mr-20 "+styles.tabs}>
             <li className={styles.regular_border}>
-              <a>O nas</a>
+              <Link href="/">O nas</Link>
             </li>
 
             <li className={styles.dropdown_border}>
-              <a>Usługi projektowania</a>
+              <Link href="/">Usługi projektowania</Link>
               <button className="ml-3">
                 <img src="/svg/arrow_down.svg" />
               </button>
             </li>
             <li className={styles.dropdown_border}>
-              <a>Usługi biurowe</a>
+              <Link href="/">Usługi biurowe</Link>
               <div
                 className={styles.menu + " " + styles.tab + " border-default"}
               >
@@ -86,7 +88,7 @@ export const Header = () => {
               </button>
             </li>
             <li className={styles.dropdown_border}>
-              <a href="/services"> Usługi druku</a>
+              <Link href="/services"> Usługi druku</Link>
               <div
                 className={styles.menu + " " + styles.tab + " border-default"}
               >
@@ -108,14 +110,14 @@ export const Header = () => {
                     <li>Fotomagnes</li>
                   </ul>
                 </div>
-                <a>Pokaż wszystko</a>
+                <Link href="/">Pokaż wszystko</Link>
               </div>
               <button className="ml-3">
                 <img src="/svg/arrow_down.svg" />
               </button>
             </li>
             <li className={styles.dropdown_border}>
-              <a href="/shop">Sklep</a>
+              <Link href="/shop">Sklep</Link>
               <button className="ml-3">
                 <img src="/svg/arrow_down.svg" />
               </button>
@@ -125,6 +127,7 @@ export const Header = () => {
         <button className={styles.card}>
           <img className="" src="/svg/UI/shopping_bag.svg" />
         </button>
+        <button className={"font-[500] cursor-pointer hover:font-[600] " +styles.login_btn}>Zaloguj</button>
       </div>
     </header>
   );

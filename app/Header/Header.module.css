@@ -11,13 +11,13 @@
   background-color: var(--background-a);
   text-overflow: clip;
   z-index: 10;
-    backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem);
 }
 
-.logo_wrapper{
+.logo_wrapper {
   margin-left: 2rem;
 }
-.title_wrapper{
+.title_wrapper {
   display: flex;
   font-size: 1.5rem;
   overflow: hidden;
@@ -27,33 +27,55 @@
   /* animation-delay: 0.2s; */
   animation-timing-function: steps(16);
 }
-@keyframes printTitle{
-  from{
+@keyframes phoneRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes printTitle {
+  from {
     max-width: 0rem;
   }
   to {
     max-width: 15rem;
   }
 }
-.pointer{
+.pointer {
   font-weight: 700;
   font-size: 1.5rem;
   animation-name: blink;
   animation-duration: 400ms;
-   animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-@keyframes blink{
-  from{
+@keyframes blink {
+  from {
     opacity: 0.3;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 .shrink {
   border-bottom: 1px solid var(--outline-color);
-
 
   fill-opacity: 0;
   height: 3.5rem;
@@ -61,6 +83,11 @@
 .phone {
   margin: auto;
   padding: 0.5rem;
+}
+.phone > img {
+  animation-name: phoneRing;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 .logo {
   border-radius: 1rem;
@@ -83,13 +110,12 @@
   overflow: hidden;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
-
 }
 .slogan.hidden {
   width: 0px;
   /* opacity: 0; */
 }
-.header li {
+.header .tabs > li {
   float: right;
 
   font-size: 1.1rem;
@@ -164,31 +190,34 @@
   color: var(--color);
   outline: none;
 }
-.sidebar_holder{
-    display: none;
-  }
-@media screen and (max-width:1500px) {
-  .phone{
+.sidebar_holder {
+  display: none;
+}
+@media screen and (max-width: 1500px) {
+  .phone {
     display: none;
   }
 }
-@media screen and (max-width:800px) {
-  .logo{
+@media screen and (max-width: 800px) {
+  .logo {
     margin-left: -1rem;
   }
-  .logo_wrapper{
+  .logo_wrapper {
     display: none;
   }
-  .header ul {
+  .header ul.tabs {
     display: none;
   }
-  .title{
+  .title {
     font-size: 1.5rem;
   }
-  .slogan{
+  .slogan {
     font-size: 0.5rem;
   }
-  .sidebar_holder{
+  .sidebar_holder {
     display: flex;
+  }
+  .login_btn{
+    display: none;
   }
 }

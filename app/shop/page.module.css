@@ -9,6 +9,7 @@
 .top_categories ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .top_categories li {
   margin: 0.5rem;
@@ -65,4 +66,9 @@
 .category img {
   height: 8rem;
   margin: auto;
+}
+@media only screen and (max-width: 900px) {
+  .top_categories {
+    display: none;
+  }
 }

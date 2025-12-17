@@ -12,5 +12,20 @@ export const shopCategories = [
   "Shoppery i torby",
   "Plecaki",
   "Czapki",
-  "Koszulki i bluzy"
+  "Koszulki i bluzy",
+];
+export const servicesCategories = [
+  { name: "Pieczątki", img: "" },
+  { name: "Wizytówki", img: "" },
+  { name: "Broszury", img: "" },
+  { name: "Katalogi", img: "" },
+  { name: "Identyfikatory", img: "" },
+  { name: "Teczki", img: "" },
+  { name: "Tabliczki grawerowane", img: "" },
+  { name: "Stojaki", img: "" },
+  { name: "Przypinki", img: "" },
+  { name: "Długopisy grawerowane", img: "" },
+  { name: "Ulotki", img: "" },
+  { name: "Kubki i filiżanki z nadrukiem", img: "" },
+  { name: "Metki", img: "" },
 ];

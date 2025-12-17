@@ -6,6 +6,7 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import MobileSidebar from "./components/MobileSidebar/MobileSidebar";
+import { LoginPanel } from "./components/LoginPanel/LoginPanel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className={` antialiased`}>
         <Header />
-        
+        {/* <LoginPanel/> */}
         {/* <Sidebar/> */}
         {children}
         <Footer />

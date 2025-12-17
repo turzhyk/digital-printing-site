@@ -8,10 +8,12 @@ export default function MobileSidebar() {
   const [isShown, setIsShown] = useState<boolean>(false);
 
   const handleBurgerClick = () => {
-    setIsShown(!isShown);
+    setIsShown(true);
+    console.log("burger click");
   };
   const onTabClick = (val: number) => {
     setTabSelected(val);
+    console.log("ddsad");
   };
   return (
     <React.Fragment>
@@ -19,15 +21,15 @@ export default function MobileSidebar() {
         <img src={"/svg/UI/burger.svg"} />
       </button>
       <div
-        className={`${styles.wrapper} ${isShown ? styles.show : ""}`}
-        onClick={() => setIsShown(false)}
+        className={`${styles.wrapper} ${isShown ? styles.show : styles.hide}`}
+        // onClick={() => setIsShown(false)}
       >
         <div className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
-          <div className="flex ml-5 items-center">
+          <div className="flex items-center ml-5 w-10">
             <img
               width={50}
-              className="mt-2 mr-2"
-              src="/svg/logo3.svg"
+              className="mt-2 mr-2 rounded-xl"
+              src="/icons/ig_logo.jpg"
               alt="Digital Printing"
             />
             <div className={"mt-2 "}>
@@ -44,13 +46,30 @@ export default function MobileSidebar() {
               </div>
             </div>
           </div>
-          <div className={" text-[1.5rem] mt-10 p-5"}>
-            <ul className="">
-              <li>
-                <button onClick={() => onTabClick(1)}>Usługi druku</button>
-              </li>
+          <button
+            className="absolute right-7 top-7"
+            onClick={() => setIsShown(false)}
+          >
+            <img className="w-7" src="/svg/UI/close.svg" />
+          </button>
+          <div className="flex justify-between mt-5 w-full gap-4 p-4">
+            <a
+              href="tel:732853845"
+              className="flex justify-center m-auto gap-2  border-default p-3 grow"
+            >
+              <img className="w-5" src="/svg/UI/phone.svg" />
+              <span>123 456 789</span>
+            </a>
+            <button className="border-default p-3 w-fit grow">Zaloguj</button>
+          </div>
+
+          <div className={styles.content + " text-[1.5rem] p-5"}>
+            <ul className={styles.tabs}>
               <li>
                 <button>Skelp</button>
+              </li>
+              <li>
+                <button onClick={() => onTabClick(1)}>Usługi druku</button>
               </li>
             </ul>
           </div>
@@ -61,13 +80,16 @@ export default function MobileSidebar() {
           >
             <div className="flex justify-between items-center">
               <button
-                className="font-[500] flex gap-2"
+                className="font-[500] text-2xl mb-2 flex gap-2 items-center"
                 onClick={() => onTabClick(0)}
               >
-                <img width={15} src={"/svg/arrow_down.svg"} />
-                Zwróc
+                <img
+                  width={15}
+                  src={"/svg/arrow_down.svg"}
+                  style={{ transform: "rotate(90deg)" }}
+                />
+                Sklep
               </button>
-              <p className="font-[500] text-2xl mb-2">Sklep</p>
             </div>
 
             <ul>

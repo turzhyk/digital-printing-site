@@ -1,12 +1,13 @@
 import React from "react";
 import { ProductTag } from "../components/ProductTag/ProductTag";
 import { Sidebar } from "../components/Sidebar/Sidebar";
+import Link from "next/link";
 
 export default function page() {
   return (
     <React.Fragment>
       <div className="flex flex-col items-center m-auto pt-30">
-        <h1 className="text-center block">Usługi naszej drukarni</h1>
+        <h1 className="text-center block p-4">Usługi naszej drukarni</h1>
         <p className="block max-w-200 p-4">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -14,6 +15,7 @@ export default function page() {
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore
         </p>
+        <a href="#firma">Firmowe</a>
       </div>
       
         <div className="m-auto flex flex-col items-center w-auto max-w-230">
@@ -48,14 +50,14 @@ export default function page() {
                 />
                 <div className="product-btn-title">Pieczątki</div>
               </button>
-              <a href="/services/businesscard" className="product-btn border-default">
-                <img  style={{ width: 120, height: 110 }} src="icons/categories/businesscards.png" />
+              <Link href="/services/businesscard" className="product-btn border-default">
+                <img  style={{ width: 120, height: 110 }} src="icons/categories/businesscards2.png" />
                 <div className="product-btn-title">Wizytówki</div>
-              </a>
+              </Link>
               <button className="product-btn border-default">
                 <img
                   style={{ width: 120, height: 110 }}
-                  src="icons/categories/brochure.webp"
+                  src="icons/categories/brochures.png"
                 />
                 <div className="product-btn-title">Broszury</div>
               </button>
@@ -72,7 +74,7 @@ export default function page() {
                 <div className="product-btn-title">Teczki</div>
               </button>
               <button className="product-btn border-default">
-                <img src="svg/signs.svg" />
+                <img style={{ width: 140, height: 130 }} src="/icons/categories/tabliczki.png" />
                 <div className="product-btn-title">Tabliczki grawerowane</div>
               </button>
               <button className="product-btn border-default">
@@ -107,7 +109,7 @@ export default function page() {
           </div>
           <div className="m-auto w-full">
             <div className="flex items-center m-4 mb-0">
-              <h1 className="m-5 ml-0">Produkcja firmowa</h1>
+              <h1 id="firma" className="m-5 ml-0">Produkcja firmowa</h1>
               {/* <div className="h-10 grow bg-violet-200 "></div> */}
             </div>
             <div className="menu-buttons m-5 mt-0">

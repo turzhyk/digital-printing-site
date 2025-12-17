@@ -264,5 +264,7 @@ p {
     overflow: clip;
     line-height: 1rem;
   }
- 
+  .screen-hidden{
+    display: none;
+  }
 }
